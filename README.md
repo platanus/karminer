@@ -25,13 +25,13 @@ redis = Redis.new(url: "redis://52.55.173.152:6379")
 
 # para escuchar:
 
-redis.subscribe_with_timeout(5, "pagos") do |on|
+redis.subscribe("pagos") do |on|
   on.message do |channel, message|
     pago = JSON.parse(message)
   end
 end
 
-redis.subscribe_with_timeout(5, "bloques") do |on|
+redis.subscribe("bloques") do |on|
   on.message do |channel, message|
     bloque = JSON.parse(message)
   end
