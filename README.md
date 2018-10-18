@@ -10,6 +10,17 @@ Básicamente un minero deberá:
 
 Se usarán funciones criptográficas de curva elíptica, se recomienda usar la gema `bitcoin-ruby` para esto.
 
+## Scafolding
+
+```
+# Install dependencies
+brew bundle install
+bundle install
+
+# Run tests with guard
+guard
+```
+
 ## Protocolo
 
 Proveeremos un servidor pubsub a los que se conectaran los nodos/mineros
