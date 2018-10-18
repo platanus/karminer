@@ -11,3 +11,8 @@ group :test do
   gem 'rspec-nc', require: false
   gem 'webmock'
 end
+
+group :development do
+  gem 'rubocop', '0.49.1'
+  gem 'rubocop-rspec', '1.16.0'
+end
